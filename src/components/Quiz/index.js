@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './index.scss';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 const Quiz = () => {
@@ -126,7 +126,12 @@ const Quiz = () => {
             value={participantName}
             onChange={(e) => setParticipantName(e.target.value)}
           />
-          <button onClick={handleQuizSubmit}>Enviar</button>
+          {participantName.length >= 8 && participantName.length <= 30 ? (
+            <Link className="ranking-btn" to="/ranking" onClick={handleQuizSubmit}>ENVIAR</Link>
+          ) : (
+            <button className="ranking-btn" disabled>ENVIAR</button>
+          )}
+
         </div>
       )}
     </div>

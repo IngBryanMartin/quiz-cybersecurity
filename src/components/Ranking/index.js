@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getFirestore, collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
 import './index.scss';
 
@@ -43,6 +44,7 @@ const Ranking = () => {
           ))}
         </tbody>
       </table>
+      <Link to="/" className="home-btn">Volver</Link>
     </div>
   );
 };

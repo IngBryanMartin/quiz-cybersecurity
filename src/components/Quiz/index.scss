@@ -48,11 +48,14 @@ body {
     background-color: #8e8e8e;
   }
   
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  .buttons button {
-    margin-right: 10px;
+  .ranking-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: #000;
+    margin-left: 10px;
+    cursor: pointer;
   }
   
