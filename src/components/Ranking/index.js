@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getFirestore, collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
 import './index.scss';
+import { firestore, addDoc } from '../../firebase';
 
 const Ranking = () => {
-  const [rankingData, setRankingData] = useState([]);
+    const [showContent, setShowContent] = useState(false);
+    const [rankingData, setRankingData] = useState([]);
 
   useEffect(() => {
     const fetchRankingData = async () => {
@@ -23,8 +25,17 @@ const Ranking = () => {
     fetchRankingData();
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 1550);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="ranking">
+        {showContent && (
+        <>
       <h2>Ranking</h2>
       <table>
         <thead>
@@ -45,6 +56,20 @@ const Ranking = () => {
         </tbody>
       </table>
       <Link to="/" className="home-btn">Volver</Link>
+      </>
+        )}
+      <div class="loader">
+        <span style={{ '--i': 1 }}></span>
+        <span style={{ '--i': 2 }}></span>
+        <span style={{ '--i': 3 }}></span>
+        <span style={{ '--i': 4 }}></span>
+        <span style={{ '--i': 5 }}></span>
+        <span style={{ '--i': 6 }}></span>
+        <span style={{ '--i': 7 }}></span>
+        <span style={{ '--i': 8 }}></span>
+        <span style={{ '--i': 9 }}></span>
+        <span style={{ '--i': 10 }}></span>
+      </div>
     </div>
   );
 };
