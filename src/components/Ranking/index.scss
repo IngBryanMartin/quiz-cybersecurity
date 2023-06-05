@@ -1,0 +1,35 @@
+.ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0e153a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    table {
+      width: 80%;
+      border-collapse: collapse;
+  
+      th,
+      td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+      }
+  
+      th {
+        background-color: #21295c;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #2c3380;
+      }
+    }
+  }

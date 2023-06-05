@@ -1,0 +1,78 @@
+.App {
+    background-color: #0a192f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .title h1 {
+    transform: translateY(-55%);
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  
+  .subtitle h2 {
+    transform: translateY(-100%);
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  .name h3{
+    transform: translateY(-80%);
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  
+  input {
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+  
+    .start-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #007bff;
+      color: #fff;
+      border: #000;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  
+    .goto-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #eaeaea;
+      color: #000;
+      text-decoration: none;
+      border: none;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .ranking-btn {
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #007bff;
+        color: #fff;
+        border: #000;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+  }
