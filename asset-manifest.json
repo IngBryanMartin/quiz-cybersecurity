@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/quiz-cybersecurity/static/css/main.34b4a5f5.css",
+    "main.js": "/quiz-cybersecurity/static/js/main.d23f9ea3.js",
+    "static/js/787.e657abcb.chunk.js": "/quiz-cybersecurity/static/js/787.e657abcb.chunk.js",
+    "index.html": "/quiz-cybersecurity/index.html",
+    "main.34b4a5f5.css.map": "/quiz-cybersecurity/static/css/main.34b4a5f5.css.map",
+    "main.d23f9ea3.js.map": "/quiz-cybersecurity/static/js/main.d23f9ea3.js.map",
+    "787.e657abcb.chunk.js.map": "/quiz-cybersecurity/static/js/787.e657abcb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34b4a5f5.css",
+    "static/js/main.d23f9ea3.js"
+  ]
+}
