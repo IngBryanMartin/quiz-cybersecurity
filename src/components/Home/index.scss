@@ -140,3 +140,66 @@ input {
     outline: 2px dotted #69e3e7;
   }
 }
+
+figure {
+  width: 12%;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 80px;
+  filter: drop-shadow(0 0 20px rgb(0 0 0/50%));
+}
+
+figure:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: top/cover;
+  transform-origin: bottom;
+  filter: brightness(.9);
+  transition: .5s;
+}
+
+img {
+  grid-area: 1/1;
+  width: 80%;
+  height: 140%;
+  object-fit: cover;
+  object-position: top;
+  filter: contrast(.8) brightness(.7);
+  place-self: end center;
+  transition: .5s;
+}
+figcaption {
+  grid-area: 1/1;
+  width: calc(100% + 40px);
+  font-family: Exoct;
+  color: #fff;
+  font-size: min(32px,5vmin);
+  text-align: center;
+  place-self: end center;
+  transform: perspective(500px) translateY(100%) rotateX(-90deg);
+  backface-visibility: hidden;
+  transform-origin: top;
+  background: #000;
+  transition: .5s;
+}
+figure:hover img {
+  width: 130%;
+  height: 255%;
+  filter: contrast(1);
+}
+figure:hover::before {
+  filter: brightness(.3);
+  transform: perspective(500px) rotateX(60deg);
+}
+figure:hover figcaption{
+  transform: perspective(500px)translateY(100%) rotateX(-30deg);
+}
+

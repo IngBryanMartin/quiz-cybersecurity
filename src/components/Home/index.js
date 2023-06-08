@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
+import PhotoDev from '../../assets/images/bryanmdev.png';
 
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
@@ -20,6 +21,10 @@ const Home = () => {
 
   return (
     <>
+    <figure>
+    <img src={PhotoDev} alt="Necromancer"/>
+    <figcaption>BryanM Dev</figcaption>
+</figure>
       <div className="App">
         <div className="content">
           {showContent && (
