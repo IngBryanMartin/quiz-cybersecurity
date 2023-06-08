@@ -1,44 +1,68 @@
 .App {
-    background-color: #0a192f;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    user-select: none;
+  background-color: #0a192f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+}
+
+.content {
+  text-align: center;
+}
+
+.title h1 {
+  transform: translateY(-55%);
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.subtitle h2 {
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: translateY(-100%);
+  font-size: 42px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms;
+
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+
+    100% {
+      background-size: 300% 300%;
+    }
   }
-  
-  .content {
-    text-align: center;
+
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
   }
-  
-  .title h1 {
-    transform: translateY(-55%);
-    font-size: 45px;
-    font-weight: bold;
-    line-height: 1.3;
-  }
-  
-  .subtitle h2 {
-    transform: translateY(-100%);
-    font-size: 26px;
-    margin-bottom: 20px;
-    line-height: 1.3;
-  }
-  .name h3{
-    transform: translateY(-80%);
-    font-size: 20px;
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-  
-  input {
-    padding: 10px;
-    width: 250px;
-    margin-bottom: 20px;
-  }
- 
+}
+
+.name h3 {
+  transform: translateY(-80%);
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
 @mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
   box-shadow: inset 0 0 0 $width $color;
   color: $color;
@@ -46,6 +70,9 @@
   position: relative;
   text-decoration: none;
   margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
 
   &::before,
   &::after {
@@ -54,28 +81,29 @@
     content: '';
     pointer-events: none;
     position: absolute;
-    width: 0; height: 0;
-    
-    #{$vertical}: 0; 
+    width: 0;
+    height: 0;
+
+    #{$vertical}: 0;
     #{$horizontal}: 0;
   }
 
   &::before {
-    $h-side: if($horizontal == 'left', 'right', 'left');
+    $h-side: if($horizontal =='left', 'right', 'left');
     border-#{$vertical}-width: $width;
     border-#{$h-side}-width: $width;
   }
-  
+
   &::after {
-    $v-side: if($vertical == 'top', 'bottom', 'top');
+    $v-side: if($vertical =='top', 'bottom', 'top');
     border-#{$v-side}-width: $width;
     border-#{$horizontal}-width: $width;
   }
-  
+
   &:hover {
     box-shadow: 0 0 0 2em transparent;
     color: $hover;
-    
+
     &::before,
     &::after {
       border-color: $hover;
@@ -83,10 +111,14 @@
       width: 100%;
       height: 100%;
     }
-    
-    &::before { transition-delay: 0s, 0s, $duration; }
-    
-    &::after { transition-delay: 0s, $duration, 0s; }
+
+    &::before {
+      transition-delay: 0s, 0s, $duration;
+    }
+
+    &::after {
+      transition-delay: 0s, $duration, 0s;
+    }
   }
 }
 
@@ -103,5 +135,8 @@
   font: 700 1.2rem 'Roboto Slab', sans-serif;
   padding: 1em 2em;
   letter-spacing: 0.05rem;
-  &:focus { outline: 2px dotted #69e3e7; }
+
+  &:focus {
+    outline: 2px dotted #69e3e7;
+  }
 }
