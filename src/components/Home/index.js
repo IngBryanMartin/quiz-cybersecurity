@@ -43,15 +43,11 @@ const Home = () => {
                 <h2>¿CREES ESTAR LISTO PARA EL DESAFIO?</h2>
               </div>
               <div className="buttons">
-                <Link className="start-btn" to="/quiz">
-                  ESTOY LISTO
-                </Link>
-                <a className="goto-btn" href="https://www.google.com/">
-                  VER CLASE
-                </a>
-                <Link className="ranking-btn" to="/ranking">
-                  RANKING
-                </Link>
+              <Link class="btn draw-border" to="/quiz">ESTOY LISTO</Link>
+              <a href="https://www.google.com/" className="btn draw-border">
+                VER CLASE
+              </a>
+              <Link class="btn draw-border" to="/ranking">RANKING</Link>
               </div>
             </>
           )}

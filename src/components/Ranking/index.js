@@ -8,6 +8,7 @@ const Ranking = () => {
     const [showContent, setShowContent] = useState(false);
     const [rankingData, setRankingData] = useState([]);
 
+
   useEffect(() => {
     const fetchRankingData = async () => {
       try {
