@@ -11,6 +11,10 @@ const Home = () => {
   const second = ['T', 'U', 'S', ' ', 'C', 'O', 'N', 'O', 'C', 'I', 'M', 'I', 'E', 'N', 'T', 'O', 'S'];
   const third = [' ', 'E', 'N', ' ', 'C', 'I', 'B', 'E', 'R', 'S', 'E', 'G', 'U', 'R', 'I', 'D', 'A', 'D'];
 
+  const handleImageClick = () => {
+    window.location.href = 'https://ingbryanmartin.github.io/my-portfolio/#/';
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowContent(true);
@@ -21,14 +25,19 @@ const Home = () => {
 
   return (
     <>
-    <figure>
-    <img src={PhotoDev} alt="Necromancer"/>
-    <figcaption>BryanM Dev</figcaption>
-</figure>
       <div className="App">
         <div className="content">
           {showContent && (
             <>
+              <figure>
+                <img
+                  src={PhotoDev}
+                  alt="BryanMDev"
+                  onClick={handleImageClick}
+                  style={{ cursor: 'pointer' }}
+                />
+                <figcaption>BryanM Dev</figcaption>
+              </figure>
               <div className="title">
                 <h1>
                   <span className={letterClass}>E</span>
@@ -48,17 +57,21 @@ const Home = () => {
                 <h2>¿CREES ESTAR LISTO PARA EL DESAFIO?</h2>
               </div>
               <div className="buttons">
-              <Link class="btn draw-border" to="/quiz">ESTOY LISTO</Link>
-              <a href="https://www.google.com/" className="btn draw-border">
-                VER CLASE
-              </a>
-              <Link class="btn draw-border" to="/ranking">RANKING</Link>
+                <Link className="btn draw-border" to="/quiz">
+                  ESTOY LISTO
+                </Link>
+                <span className="btn draw-border" onClick={handleImageClick} style={{ cursor: 'pointer' }}>
+                  VER CLASE
+                </span>
+                <Link className="btn draw-border" to="/ranking">
+                  RANKING
+                </Link>
               </div>
             </>
           )}
         </div>
       </div>
-      <div class="loader">
+      <div className="loader">
         <span style={{ '--i': 1 }}></span>
         <span style={{ '--i': 2 }}></span>
         <span style={{ '--i': 3 }}></span>
