@@ -12,9 +12,9 @@ const Quiz = () => {
   const questions = [
     {
       id: 1,
-      question: '¿Qué es la ciberseguridad?',
-      options: ['Es una medida', 'No lo sé', 'Es seguridad', 'Es una técnica'],
-      correctOption: 'Es una medida',
+      question: '¿Qué es el phishing?',
+      options: ['Un programa malicioso que se propaga por correo electrónico.', 'El proceso de engañar a las personas para obtener información confidencial.', 'Un ataque de denegación de servicio.', 'Una técnica de cifrado de datos.'],
+      correctOption: 'El proceso de engañar a las personas para obtener información confidencial.',
     },
     // Agregar las demás preguntas aquí
     {
@@ -106,32 +106,37 @@ const Quiz = () => {
               </div>
             ))}
           </div>
-          <div className="buttons">
+          <div className="button-quiz">
             {currentQuestion > 1 && (
-              <button onClick={goToPreviousQuestion}>Retroceder</button>
+              <button onClick={goToPreviousQuestion}>
+                <span>Retroceder</span></button>
             )}
             <button onClick={goToNextQuestion} disabled={selectedOption === null}>
-              Siguiente
+            <span>Siguiente</span>
             </button>
           </div>
         </>
       ) : (
         <div>
-          <h2 className="quiz-title">¡Quiz completado!</h2>
+          <h2 className="quiz-title">Felicidades, has completado todas las preguntas</h2>
+          <p>Necesitamos tu nombre para colocarte en nuestro ranking</p>
           <p>Tu nombre: {participantName}</p>
-          <p>Tu puntaje: {score}/{totalQuestions}</p>
+          <p>Tu puntaje es: {score}/{totalQuestions}</p>
           <input
             type="text"
             placeholder="Ingresa tu nombre"
             value={participantName}
             onChange={(e) => setParticipantName(e.target.value)}
           />
+          <div className="button-rank">
           {participantName.length >= 8 && participantName.length <= 30 ? (
-            <Link className="ranking-btn" to="/ranking" onClick={handleQuizSubmit}>ENVIAR</Link>
+            <button>
+            <Link to="/ranking" onClick={handleQuizSubmit}><span>ENVIAR</span></Link>
+            </button>
           ) : (
-            <button className="ranking-btn" disabled>ENVIAR</button>
+            <button disabled><span>ENVIAR</span></button>
           )}
-
+          </div>
         </div>
       )}
     </div>
