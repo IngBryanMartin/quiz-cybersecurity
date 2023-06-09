@@ -58,7 +58,8 @@ const Home = () => {
                 </h1>
               </div>
               <div className="subtitle">
-                <h2>¿CREES ESTAR LISTO PARA EL DESAFIO?</h2>
+                <h2>¿ESTÁS LISTO PARA EL DESAFÍO DE 40 PREGUNTAS?
+                </h2>
               </div>
               <div className="buttons">
                 <Link className="btn draw-border" to="/quiz">
