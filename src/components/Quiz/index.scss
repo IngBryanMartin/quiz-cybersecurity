@@ -6,6 +6,43 @@ body {
   .quiz {
     text-align: center;
     background-color: #192841;
+
+    
+  button {
+    border: none;
+    border-radius: 8px;
+    margin: 12px;
+    padding: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: linear-gradient(150deg, #8000FF, #4D0F8B 50%, #00E6FF);
+  }
+
+  button:disabled {
+    border: none;
+    border-radius: 8px;
+    margin: 12px;
+    padding: 4px;
+    overflow: hidden;
+    cursor: not-allowed;
+    background-image: linear-gradient(150deg, #8000FF, #4D0F8B 50%, #00E6FF);
+  }
+
+  button span {
+    display: flex;
+    border-radius: 6px;
+    padding: 12px 34px;
+    
+    color: #fff;
+    font-size: 22px;
+    background-color: #0a192f;
+    transition: 300ms;
+  }
+
+  button:hover span {
+    background: transparent;
+  }
+
   }
   
   .quiz-title {
@@ -50,41 +87,6 @@ body {
   p {
     font-size: 24px;
     font-weight: 500;
-  }
-
-  button {
-    border: none;
-    border-radius: 8px;
-    margin: 12px;
-    padding: 4px;
-    overflow: hidden;
-    cursor: pointer;
-    background-image: linear-gradient(150deg, #8000FF, #4D0F8B 50%, #00E6FF);
-  }
-
-  button:disabled {
-    border: none;
-    border-radius: 8px;
-    margin: 12px;
-    padding: 4px;
-    overflow: hidden;
-    cursor: not-allowed;
-    background-image: linear-gradient(150deg, #8000FF, #4D0F8B 50%, #00E6FF);
-  }
-
-  button span {
-    display: flex;
-    border-radius: 6px;
-    padding: 12px 34px;
-    
-    color: #fff;
-    font-size: 22px;
-    background-color: #0a192f;
-    transition: 300ms;
-  }
-
-  button:hover span {
-    background: transparent;
   }
 
   

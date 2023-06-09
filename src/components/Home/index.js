@@ -15,6 +15,10 @@ const Home = () => {
     window.location.href = 'https://ingbryanmartin.github.io/my-portfolio/#/';
   };
 
+  const handleButtonClick = () => {
+    window.location.href = 'https://www.google.com';
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowContent(true);
@@ -60,7 +64,7 @@ const Home = () => {
                 <Link className="btn draw-border" to="/quiz">
                   ESTOY LISTO
                 </Link>
-                <span className="btn draw-border" onClick={handleImageClick} style={{ cursor: 'pointer' }}>
+                <span className="btn draw-border" onClick={handleButtonClick} style={{ cursor: 'pointer' }}>
                   VER CLASE
                 </span>
                 <Link className="btn draw-border" to="/ranking">
