@@ -56,7 +56,7 @@ const Ranking = () => {
           ))}
         </tbody>
       </table>
-      <Link to="/" className="home-btn">Volver</Link>
+      <Link to="/" className="btn draw-border">Volver</Link>
       </>
         )}
       <div class="loader">
