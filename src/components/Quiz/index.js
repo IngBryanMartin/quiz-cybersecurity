@@ -79,7 +79,6 @@ const Quiz = () => {
     score: score,
   })
     .then(() => {
-      alert('¡Nombre y resultado guardados en Firebase!');
       // Realizar cualquier redirección u otra acción que desees
     })
     .catch((error) => {
