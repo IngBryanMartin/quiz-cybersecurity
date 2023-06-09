@@ -524,12 +524,15 @@ const Quiz = () => {
             ))}
           </div>
           <div className="button-quiz">
+            <button>
+            <Link to="/"><span>MENÚ</span></Link>
+            </button>
             {currentQuestion > 1 && (
               <button onClick={goToPreviousQuestion}>
-                <span>Retroceder</span></button>
+                <span>RETROCEDER</span></button>
             )}
             <button onClick={goToNextQuestion} disabled={selectedOption === null}>
-            <span>Siguiente</span>
+            <span>SIGUIENTE</span>
             </button>
           </div>
         </>
