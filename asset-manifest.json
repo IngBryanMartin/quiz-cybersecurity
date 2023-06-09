@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/quiz-cybersecurity/static/css/main.3ba95cfe.css",
-    "main.js": "/quiz-cybersecurity/static/js/main.97d2df8d.js",
+    "main.css": "/quiz-cybersecurity/static/css/main.37a199d5.css",
+    "main.js": "/quiz-cybersecurity/static/js/main.e8112abc.js",
     "static/js/787.e657abcb.chunk.js": "/quiz-cybersecurity/static/js/787.e657abcb.chunk.js",
     "static/media/bryanmdev.png": "/quiz-cybersecurity/static/media/bryanmdev.2fdec14f9e614937a507.png",
     "index.html": "/quiz-cybersecurity/index.html",
-    "main.3ba95cfe.css.map": "/quiz-cybersecurity/static/css/main.3ba95cfe.css.map",
-    "main.97d2df8d.js.map": "/quiz-cybersecurity/static/js/main.97d2df8d.js.map",
+    "main.37a199d5.css.map": "/quiz-cybersecurity/static/css/main.37a199d5.css.map",
+    "main.e8112abc.js.map": "/quiz-cybersecurity/static/js/main.e8112abc.js.map",
     "787.e657abcb.chunk.js.map": "/quiz-cybersecurity/static/js/787.e657abcb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ba95cfe.css",
-    "static/js/main.97d2df8d.js"
+    "static/css/main.37a199d5.css",
+    "static/js/main.e8112abc.js"
   ]
 }
